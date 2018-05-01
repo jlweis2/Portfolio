@@ -1,0 +1,149 @@
+#TipCalculator{
+    position: absolute;
+    text-align: center;
+    border: solid;
+    padding: 2em 8em 25em 8em;
+    margin-left: 25%;
+    
+}
+#button1{
+    text-align: center;
+    padding: 1em 1em 1em 1em;
+    position: absolute;
+    top: 150px;
+    left: 150px;
+}
+#button2{
+    text-align: center;
+    padding: 1em 1em 1em 1em;
+    position: absolute;
+    top: 150px;
+    left: 200px;
+}
+#button3{
+    text-align: center;
+    padding: 1em 1em 1em 1em;
+    position: absolute;
+    top: 150px;
+    left: 250px;
+}
+#button4{
+    text-align: center;
+    padding: 1em 1em 1em 1em;
+    position: absolute;
+    top: 200px;
+    left: 150px;
+}
+#button5{
+    text-align: center;
+    padding: 1em 1em 1em 1em;
+    position: absolute;
+    top: 200px;
+    left: 200px;
+}
+#button6{
+    text-align: center;
+    padding: 1em 1em 1em 1em;
+    position: absolute;
+    top: 200px;
+    left: 250px;
+}
+#button7{
+    text-align: center;
+    padding: 1em 1em 1em 1em;
+    position: absolute;
+    top: 250px;
+    left: 150px;
+}
+#button8{
+    text-align: center;
+    padding: 1em 1em 1em 1em;
+    position: absolute;
+    top: 250px;
+    left: 200px;
+}
+#button9{
+    text-align: center;
+    padding: 1em 1em 1em 1em;
+    position: absolute;
+    top: 250px;
+    left: 250px;
+}
+#button0{
+    text-align: center;
+    padding: 1em 1em 1em 1em;
+    position: absolute;
+    top: 300px;
+    left: 200px;
+}
+#decimal{
+    position: absolute;
+    padding: 1em 1.3em 1em 1em;
+    top: 300px;
+    left: 250px;
+}
+#clear{
+    position: absolute;
+    padding: 1em .25em 1em .25em;
+    top: 300px;
+    left: 150px;
+}
+span{
+    position: absolute;
+    top: 400px;
+    left: 110px;
+}
+
+
+#tipPercentage{
+    position: absolute;
+    top: 400px;
+    left: 125px;
+}
+#percentageText{
+    position: absolute;
+    top: 350px;
+    left: 75px;
+}
+#peopleSplittingTip{
+    position: absolute;
+    top: 425px;
+    left: 75px;
+}
+#numberOfPeopleSplittingTip{
+    position: absolute;
+    top: 475px;
+    left: 125px;
+}
+#inputField{
+    text-align: center;
+}
+#totalAmountOfBill{ 
+    width: 50%;
+    height: 10%;
+    position: absolute;
+    top: 600px;
+}
+#billAmount{
+    position: absolute;
+    top: 100px;
+    left: 45px;
+}
+#percentSign{
+    position: absolute;
+    top: 385px;
+    left: 110px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
