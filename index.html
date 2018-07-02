@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>My Final Javascript Project</title>
+    <link rel="stylesheet" href="CssFile/Project.css"/>
+        <script>
+       window.addEventListener ( 'load', loadListener ) ;
+        
+        function loadListener ()
+        { document.getElementById("calculateButton").addEventListener ('click', buttonListener );
+        }//end of function load listener
+        
+        function buttonListener ()//this function will run when the button is clicked
+        {
+            //pulls the info inside the first input field
+            var  numberEntered = document.getElementById("inputField").value ;
+            //pulls the info inside the percentage input field
+            var tipEntered = document.getElementById("tipPercentage").value ;
+            //pulls the info inside the number of people input field
+            var numberOfPeople = document.getElementById("numberOfPeopleSplittingTip").value;
+            //This starts where my actual formula works
+            if(numberOfPeople == '1' || numberOfPeople == '')
+                {
+                    if (tipEntered == '' || tipEntered == '0')// Orignial total with nothing else added
+                    {
+                        document.getElementById("totalAmountOfBill").innerText = "Your tip amount was $0 \nYour total bill = $" + numberEntered;
+                    }
+                    else //This statement adds the bill amount with the tip you want to give without splitting it
+                    {
+                        var findingTheTip = Number(numberEntered) /  Number(tipEntered);
+                        var total = Number(numberEntered) + findingTheTip;
+                        document.getElementById("totalAmountOfBill").innerText = "Your tip amount was $" + findingTheTip + "\nYour total bill is $" + total;
+                    }
+                }//end of nested if else statement inside overal if statement
+            else
+            {
+                       if (tipEntered == '' || tipEntered == '0')//This will give you your total bill after splitting between people with NO tip
+                    {
+                        var totalNumberWithPeopleSplitting = Number(numberEntered) / Number(numberOfPeople);
+                        document.getElementById("totalAmountOfBill").innerText = "Your total bill = $" + numberEntered + "\nTotal bill split between " + numberOfPeople +" people would be $" + totalNumberWithPeopleSplitting +" per person";
+                    }
+                    else //This will give you your total bill after splitting between people AND having a tip included
+                    {
+                        var theTip = Number(numberEntered) /  Number(tipEntered);
+                        var totalWithPeopleSplitting = Number(numberEntered) + theTip;
+                        var tipWithPeopleSplitting = Number(totalWithPeopleSplitting) / Number(numberOfPeople);
+                        document.getElementById("totalAmountOfBill").innerText = "Your tip amount was $" + theTip + "\nYour total bill with the tip would be $" + totalWithPeopleSplitting + "\nTotal bill split between " + numberOfPeople + " people would be $" + tipWithPeopleSplitting;                 
+                    }  //end of nested if else statement inside overall else statement
+            }//end of overall if else statement
+            
+  
+        }//end of button listener function
+    
+    </script>
+</head>
+
+<body>
+    <div id="TipCalculator">
+        <h1>Tip Calculator</h1>
+    <input id="inputField" name="inputField" type="text">
+        
+   <!-- This is the start of all number pad buttons and the calculate button-->
+    <button id="button1" value="1" onclick="inputField.value += '1'">1</button>
+    <button id="button2" value="2" onclick="inputField.value += '2'">2</button>
+    <button id="button3" value="3" onclick="inputField.value += '3'">3</button>
+    <button id="button4" value="4" onclick="inputField.value += '4'">4</button>
+    <button id="button5" value="5" onclick="inputField.value += '5'">5</button>
+    <button id="button6" value="6" onclick="inputField.value += '6'">6</button>
+    <button id="button7" value="7" onclick="inputField.value += '7'">7</button>
+    <button id="button8" value="8" onclick="inputField.value += '8'">8</button>
+    <button id="button9" value="9" onclick="inputField.value += '9'">9</button>
+    <button id="button0" value="0" onclick="inputField.value += '0'">0</button>
+    <button id="decimal" value="." onclick="inputField.value += '.'">.</button>
+    <button id="calculateButton">Calculate</button>
+     <button id="clear" value="" onclick="inputField.value = ''">Clear</button>
+        <!--This is the end of number pad buttons-->
+    <p id="billAmount">Bill Amount</p>
+    <p id="percentSign">%</p>
+    <p id="percentageText">Insert the Percentage that you want to give.</p>
+    <input id="tipPercentage" type="number" min="0">
+    <p id="peopleSplittingTip">How many people are splitting the tip?</p> 
+    <input id="numberOfPeopleSplittingTip" type="number" min="1">
+
+    </div>
+   
+    <textarea id="totalAmountOfBill" rows="1" cols="92"></textarea>
+</body>
+
+</html>
