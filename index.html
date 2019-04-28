@@ -25,13 +25,13 @@
                 {
                     if (tipEntered == '' || tipEntered == '0')// Orignial total with nothing else added
                     {
-                        document.getElementById("totalAmountOfBill").innerText = "Your tip amount was $0 \nYour total bill = $" + numberEntered;
+                        document.getElementById("totalAmountOfBill").innerText = "Your tip amount was $0 \n Your total bill = $" + numberEntered;
                     }
                     else //This statement adds the bill amount with the tip you want to give without splitting it
                     {
                         var findingTheTip = Number(numberEntered) /  Number(tipEntered);
                         var total = Number(numberEntered) + findingTheTip;
-                        document.getElementById("totalAmountOfBill").innerText = "Your tip amount was $" + findingTheTip + "\nYour total bill is $" + total;
+                        document.getElementById("totalAmountOfBill").innerText = "Your tip amount was $" + findingTheTip + "\n Your total bill is $" + total;
                     }
                 }//end of nested if else statement inside overal if statement
             else
@@ -39,7 +39,7 @@
                        if (tipEntered == '' || tipEntered == '0')//This will give you your total bill after splitting between people with NO tip
                     {
                         var totalNumberWithPeopleSplitting = Number(numberEntered) / Number(numberOfPeople);
-                        document.getElementById("totalAmountOfBill").innerText = "Your total bill = $" + numberEntered + "\nTotal bill split between " + numberOfPeople +" people would be $" + totalNumberWithPeopleSplitting +" per person";
+                        document.getElementById("totalAmountOfBill").innerText = "Your total bill = $" + numberEntered + "\n Total bill split between " + numberOfPeople +" people would be $" + totalNumberWithPeopleSplitting +" per person";
                     }
                     else //This will give you your total bill after splitting between people AND having a tip included
                     {
